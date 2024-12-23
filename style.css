@@ -1,0 +1,422 @@
+/*-- Bharat Intern Internship --*/
+/*-- Domain Name -  Web Development --*/
+/*-- Task - 3(Homepage of Netflix) --*/
+/*-- Intern Name - tia raizada --*/
+
+
+:root{
+    --primary-color: #222020;
+    --dark-color: #648794;
+    --light-color: #f4f4f4;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #44565e;
+    color: #999999;
+    font-family: Orbitron, sans-serif;
+    
+}
+
+ul{
+    list-style: none;
+}
+
+h1,h2{
+    color: #5fb7dc;
+}
+h3,h4{
+    color: #222020;
+}
+h3{
+    font-weight: lighter;
+}
+
+a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+p{
+    margin: 0.5rem 0;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+}
+
+img{
+    width: 100%;
+}
+
+.showcase{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: url(background.webp);
+}
+
+.showcase::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow: 120px 100px 250px #000000 , inset -120px -100px 250px #000000;
+}
+
+.showcase-top{
+    position: relative;
+    z-index: 2;
+    height: 50px;
+}
+
+.showcase-top img{
+    width: 140px;
+    position: absolute;
+    top: 80%;
+    left: 0;
+    transform: translate(40% , -50%);
+}
+
+.showcase-top a{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-60% , -50%);
+}
+
+.showcase-content{
+    position: relative;
+    margin: 0 20%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 9rem;
+}
+.img-content {
+    width: 100%; 
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    margin-bottom: 20px; 
+    object-fit: cover; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.img-content:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+}
+
+.showcase-content h1{
+    font-weight: 700;
+    font-size: 64px;
+    margin: 0 30px;
+    max-width: 800px;
+    line-height: 74.5px;
+}
+
+.showcase-content h3{
+    color: white;
+    font-size: 25px;
+    margin: 16px 0;
+}
+
+.showcase-content p{
+    font-size: 19.2px;
+    font-weight: 300;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+}
+
+.showcase-content input{
+    position: absolute;
+    left: 0;
+    bottom: -8vh;
+    width: 454px;
+    height: 3rem;
+    font-size: 1rem;
+    padding-left: 0.5rem;
+}
+
+.btn{
+    display: inline-block;
+    background-color: #76bed6;
+    color: black;
+    padding: 0.5rem 1.2rem;
+    font-size: 1rem;
+    text-align: center;
+    border: none;
+    border-radius: 20px;
+    margin-right: 0.5rem;
+    outline: none;
+    box-shadow: 0 5px 3px rgba(0, 0, 0, 0.45);
+}
+
+.btn:hover{
+    opacity: 0.9;
+    color: rgb(240, 237, 237);
+    border: 2px solid rgb(38, 29, 29);
+    border-radius: 20px;
+    background-color: #0b0707;
+    cursor: pointer;
+}
+
+
+.showcase-content .btn-lg{
+    position: absolute;
+    right: 0;
+    bottom: -8vh;
+    padding: 0.5rem 1.2rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    height: 36px;
+    width: 14rem;
+}
+
+.card-0 , 
+.card-1,
+.card-2,
+.card-3{
+    border-top: 8px rgb(168, 125, 125) solid;
+    padding: 50px;
+}
+
+.card-0{
+    position: relative;
+    display: inline-grid;
+    grid-template-columns: 40% 50%;
+    text-align: left;
+    align-items: center;
+    padding: 25px 45px 50px;
+}
+
+.desc-0{
+    padding-left: 100px;
+}
+
+.card-1{
+    position: relative;
+    display: inline-grid;
+    grid-template-columns: 50% 40%;
+    text-align: left;
+    align-items: center;
+    padding: 25px 45px 50px;
+}
+
+.desc-1{
+    padding-left: 80px;
+}
+
+.style-cards h1{
+    font-size: 3rem;
+    padding: 1rem;
+    padding-left: 0;
+}
+
+.style-cards h3{
+    font-size: 1.6rem;
+    line-height: 2rem;
+}
+
+.card-1 video{
+    position: relative;
+    width: 100%;
+    height: 54%;
+    grid-column: 2/2;
+    grid-row: 1/2;
+    z-index: -1;
+}
+
+.card-1 img{
+    grid-column: 2/2;
+    grid-row: 1/2;
+}
+
+.card-2{
+    position: relative;
+    display: inline-grid;
+    grid-template-columns: 40% 50%;
+    text-align: left;
+    align-items: center;
+    padding: 25px 45px 50px;
+}
+
+.desc-2{
+    padding-left: 100px;
+}
+
+.card-3{
+    position: relative;
+    display: inline-grid;
+    grid-template-columns: 50% 40%;
+    text-align: left;
+    align-items: center;
+    padding: 25px 45px 50px;
+}
+
+.desc-3{
+    padding-left: 80px;
+    padding-right: 20px;
+}
+
+.card-3 img{
+    width: 110%;
+    grid-column: 2/2;
+    grid-row: 1/2;
+}
+.lastsec{
+    padding:40px;
+}
+
+.faq h1{
+    text-align: center;
+    padding-bottom: 40px;
+    font-size: 25px;
+    margin-bottom: 20px;
+
+}
+
+.questions{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding:0;
+    margin-bottom:30px;
+    overflow: hidden;
+    
+}
+
+.questions li{
+    padding: 20px 30px;
+    margin: 5px;
+    font-size: 1.6rem;
+    color: white;
+    text-align: left;
+    width: 50%;
+}
+
+button{
+    padding: 20px 30px;
+    margin: 5px;
+    font-size: 1.6rem;
+    color: black;
+    text-align: left;
+    border-radius: 10px;
+    width: 50%;
+}
+
+button:hover{
+    color: rgb(240, 237, 237);
+    border: 2px solid rgb(38, 29, 29);
+    border-radius: 20px;
+    background-color: #0b0707;
+    cursor: pointer;
+}
+.btn-img {
+    background-size: cover;  /* Ensures the image covers the entire background */
+    background-position: center; /* Center the image */
+    border: 2px solid #007bff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    min-width: 150px; /* Minimum width for each button */
+    height: 200px; /* Fixed height */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center the text vertically */
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay to make text readable */
+}
+.btn-img:hover {
+    transform: translateX(10px); /* Slide the card 10px on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+.faq p{
+    padding-top: 60px;
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+
+.input{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+margin-top: 20px;
+}
+
+.input input{
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 250px;
+    margin-bottom: 15px;
+}
+
+.input button{
+    height: 3.25rem;
+    width: 320px;
+    left: 20px;
+    text-align: center;
+    background-color: #76bed6;
+    color: black;
+    font-size: 1.5rem;
+    padding: 15px 32px;
+    border: none;
+    border-radius: 10px;
+}
+
+.input button:hover{
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(38, 29, 29);
+    border-radius: 20px;
+    background-color: #0b0707;
+
+}
+
+.footer{
+    max-width: 70%;
+    margin: 1rem auto;
+    overflow: auto;
+}
+
+.footer ,
+.footer a{
+    color: #999999;
+    font-size: 0.9rem;
+}
+
+.footer p{
+    margin-bottom: 1.5rem;
+}
+
+.footer .footer-cols{
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    grid-gap: 2rem;
+}
+.footer ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer li{
+    line-height: 2.4;
+}
+
